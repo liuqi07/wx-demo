@@ -1,0 +1,8 @@
+<!--welcome.wxml-->
+<view class="container">
+    <image class="user-avatar" src="../../images/img01.jpg"></image>
+    <text class="user-name"><text style="color:red;">Hello</text> World</text>
+    <view class="moto-container">
+        <text class="moto">开启小程序之旅</text>
+    </view>
+</view>

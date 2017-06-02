@@ -1,0 +1,62 @@
+<!--post.wxml-->
+<view>
+    <swiper indicator-dots="true" autoplay="true" interval="5000">
+        <swiper-item>
+            <image src="/images/swiper01.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/swiper02.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/swiper03.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/swiper04.jpg"></image>
+        </swiper-item>
+    </swiper>
+    <view class="post-container">
+        <view class="post-author-date">
+            <image class="post-author" src="/images/img01.jpg"></image>
+            <text class="post-date">{{ date }}</text>
+        </view>
+        <text class="post-title">{{ title }}</text>
+        <image class="post-image" src="/images/swiper01.jpg"></image>
+        <text class="post-content">的萨芬撒丰盛的撒了附近山东矿机SD卡富士康的房间就撒的疯狂叫撒看风景时飞s的放水电费阿大放送暗室逢灯似懂非懂</text>
+        <view class="post-like">
+            <image class="post-like-image" src="/icons/view.png"></image>
+            <text class="post-like-font">92</text>
+            <image class="post-like-image" src="/icons/chat.png"></image>
+            <text class="post-like-font">25</text>
+        </view>
+    </view>
+    <view class="post-container">
+        <view class="post-author-date">
+            <image class="post-author" src="/images/img01.jpg"></image>
+            <text class="post-date">Nov 25 2016</text>
+        </view>
+        <text class="post-title">正是虾蟹肥壮时</text>
+        <image class="post-image" src="/images/swiper01.jpg"></image>
+        <text class="post-content">的萨芬撒丰盛的撒了附近山东矿机SD卡富士康的房间就撒的疯狂叫撒看风景时飞s的放水电费阿大放送暗室逢灯似懂非懂</text>
+        <view class="post-like">
+            <image class="post-like-image" src="/icons/view.png"></image>
+            <text class="post-like-font">92</text>
+            <image class="post-like-image" src="/icons/chat.png"></image>
+            <text class="post-like-font">25</text>
+        </view>
+    </view>
+    <view class="post-container">
+        <view class="post-author-date">
+            <image class="post-author" src="/images/img01.jpg"></image>
+            <text class="post-date">Nov 25 2016</text>
+        </view>
+        <text class="post-title">正是虾蟹肥壮时</text>
+        <image class="post-image" src="/images/swiper01.jpg"></image>
+        <text class="post-content">的萨芬撒丰盛的撒了附近山东矿机SD卡富士康的房间就撒的疯狂叫撒看风景时飞s的放水电费阿大放送暗室逢灯似懂非懂</text>
+        <view class="post-like">
+            <image class="post-like-image" src="/icons/view.png"></image>
+            <text class="post-like-font">92</text>
+            <image class="post-like-image" src="/icons/chat.png"></image>
+            <text class="post-like-font">25</text>
+        </view>
+    </view>
+</view>
