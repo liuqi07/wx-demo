@@ -26,11 +26,11 @@ swiper image {
 .post-author {
     width: 60rpx;
     height: 60rpx;
-    vertical-align: center;
+    vertical-align: middle;
 }
 .post-date {
     margin-left: 20rpx;
-    vertical-align: center;
+    vertical-align: middle;
     margin-bottom: 5px;
     font-size: 26rpx;
 }

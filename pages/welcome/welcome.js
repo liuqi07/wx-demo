@@ -5,12 +5,15 @@ Page({
         //     url: '../posts/post'
         // });
         // 平行跳转页面
-        wx.redirectTo({
-            url: '../posts/post',
-        });
+        // wx.redirectTo({
+        //     url: '../posts/post',
+        // });
     },
     onTextTap: function(){
-
+        console.log(123)
+        wx.navigateTo({
+            url: '../posts/post',
+        });
     },
     
     onUnload: function(){

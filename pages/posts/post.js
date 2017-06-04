@@ -9,6 +9,14 @@ Page({
     data: {
         // 小程序总是会读取data对象来做数据绑定
         // 而这个动作的执行，是在onLoad函数执行之后发生的
+        // postsList: []
+    },
+
+    onPostTap: function(ev){
+      var postId = ev.currentTarget.dataset.postid;
+      wx.navigateTo({
+          url: 'post-detail/post-detail?id=' + postId
+      });
     },
 
     /**

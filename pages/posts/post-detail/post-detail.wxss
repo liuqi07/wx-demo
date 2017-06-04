@@ -1,0 +1,88 @@
+/* post-detail.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.head-image {
+    width: 750rpx;
+    height: 460rpx;
+}
+.audio {
+    width: 102rpx;
+    height: 110rpx;
+    position: absolute;
+    left: 50%;
+    margin-left: -51rpx;
+    top: 180rpx;
+    opacity: 0.6;
+}
+.author-date {
+    flex-direction: row;
+    margin-left: 30rpx;
+    margin-top: 25rpx;
+}
+.avatar {
+    width: 64rpx;
+    height: 64rpx;
+    vertical-align: middle;
+}
+.author {
+    font-size: 30rpx;
+    font-weight: 300;
+    margin-left: 20rpx;
+    vertical-align: middle;
+    color: #666;
+}
+.const-text {
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    color: #999;
+}
+.date {
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    color: #999;
+    vertical-align: middle;
+}
+.title {
+    margin-left: 40rpx;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #4b556c;
+    letter-spacing: 2px;
+}
+.tool {
+    margin-top: 20rpx;
+}
+.circle-img {
+    float: right;
+    margin-right: 40rpx;
+    vertical-align: middle;
+}
+.circle-img image {
+    width: 90rpx;
+    height: 90rpx;
+}
+.share-img {
+    margin-left: 30rpx;
+}
+.horizon {
+    width: 660rpx;
+    height: 2rpx;
+    background-color: #e5e5e5;
+    vertical-align: middle;
+    position: relative;
+    top: 46rpx;
+    margin: 0 auto;
+    z-index: -99;
+}
+.detail {
+    color: #666;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    letter-spacing: 2rpx;
+    line-height: 44rpx;
+}
