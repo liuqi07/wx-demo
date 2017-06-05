@@ -1,0 +1,12 @@
+<import src="movie-grid/movie-grid-tpl.wxml" />  
+<view class="container">
+    <view class="search">
+        <image src="/images/icon/search.png"></image>
+        <input placeholder="釜山行、夏有乔木仰望天堂" />
+    </view>
+    <view class="movieGrid">
+        <template is="movieGridTpl" data="{{...inTheaters}}" />
+        <template is="movieGridTpl" data="{{...comingSoon}}" />
+        <template is="movieGridTpl" data="{{...top250}}" />
+    </view>
+</view>

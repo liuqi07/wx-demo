@@ -1,0 +1,9 @@
+@import "../movie/movie-tpl.wxss";
+
+.single-view-container {
+    float: left;
+    margin: 0 15rpx 40rpx 15rpx;
+}
+.movie-list-container {
+    margin: 40rpx 0 40rpx 15rpx;
+}

@@ -27,7 +27,10 @@ Page({
         } else {
             var postsCollected = {};
             postsCollected[postId] = false;
-            wx.setStorageSync('postsCollected', postsCollected)
+            wx.setStorageSync('postsCollected', postsCollected);
+            this.setData({
+                currPostId: postId
+            })
         }
         if(globalData.isPlayingMusic_g){
             this.setData({

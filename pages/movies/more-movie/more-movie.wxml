@@ -1,0 +1,3 @@
+<import src="../movie-list/movie-list-tpl.wxml" />
+
+<template is="movieListTpl" data="{{movies}}"></template>

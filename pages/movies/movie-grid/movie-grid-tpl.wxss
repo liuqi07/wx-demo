@@ -1,0 +1,33 @@
+@import '../movie/movie-tpl.wxss';
+.grid-container {
+	background-color: #F2F2F2;
+	padding-bottom: 40rpx;
+}
+.grid-content {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 20rpx 30rpx;
+}
+.gp-head {
+	margin-bottom: 20rpx;
+}
+.gp-title {
+	float: left;
+	font-size: 24rpx;
+}
+.more {
+	float: right;
+}
+.more text {
+	color: #1f4ba5;
+	margin-right: 10rpx;
+}
+.more image {
+	width: 9rpx;
+	height: 16rpx;
+}
+.grid-movies {
+	display: flex;
+	justify-content:space-between;
+}

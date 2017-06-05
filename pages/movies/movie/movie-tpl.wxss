@@ -1,0 +1,15 @@
+@import '../stars/stars-tpl.wxss';
+
+.movie-container {
+    display: flex;
+	flex-direction: column;
+}
+.movie-img {
+	width: 200rpx;
+	height: 270rpx;
+	margin-bottom: 20rpx;
+}
+.movie-title {
+	font-size: 24rpx;
+	margin-bottom: 16rpx;
+}

@@ -1,0 +1,19 @@
+<import src="../movie/movie-tpl.wxml" />
+<template name="movieGridTpl">
+    <view class="grid-container">
+		<view class="grid-content">
+		    <view class="gp-head">
+				<text class="gp-title">{{title}}</text>
+				<view class="more" catchtap="onMoreTap" data-category="{{title}}">
+					<text>更多</text>
+					<image src="/images/icon/arrow-right.png"></image>
+				</view>
+			</view>
+			<view class="grid-movies">
+				<block wx:for="{{ movies }}" wx:for-item="movie">
+					<template is="movieTpl" data="{{...movie}}"/>
+				</block>
+			</view>
+		</view>
+    </view>
+</template>

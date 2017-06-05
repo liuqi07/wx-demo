@@ -1,0 +1,9 @@
+<import src="../movie/movie-tpl.wxml" />
+
+<template name="movieListTpl">
+    <block wx:for="{{ movies }}" wx:for-item="movie">
+        <view class="single-view-container">
+            <template is="movieTpl" data="{{...movie}}"></template>
+        </view>
+    </block>
+</template>

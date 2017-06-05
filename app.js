@@ -1,7 +1,8 @@
 App({
 
     globalData: {
-        isPlayingMusic_g: false
+        isPlayingMusic_g: false,
+		doubanBase: 'https://api.douban.com'
     },
 
   /**

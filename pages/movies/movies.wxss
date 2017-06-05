@@ -1,1 +1,25 @@
 /* movies.wxss */
+@import 'movie-grid/movie-grid-tpl.wxss';
+
+.container {
+    display: flex;
+	flex-direction: column;
+}
+.search {
+	display: flex;
+	flex-direction: row;
+	background: #f2f2f2;
+	padding: 20rpx 30rpx;
+	font-size: 28rpx;
+}
+.search image {
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 50rpx;
+	margin-top: 5rpx;
+}
+.search input {
+	width: 600rpx;
+	font-size: 24rpx;
+	color: #a1a1a1;
+}

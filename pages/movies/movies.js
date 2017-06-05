@@ -1,66 +1,71 @@
-// movies.js
+var app = getApp();
+var util = require('../../utils/util.js');
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+	data: {
+		inTheaters: {},
+		comingSoon: {},
+		top250: {}
+	},
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+	onLoad(ev) {
+		var inTheatersUrl = app.globalData.doubanBase + '/v2/movie/in_theaters?start=0&count=3',
+			comingSoonUrl = app.globalData.doubanBase + '/v2/movie/coming_soon?start=0&count=3',
+			top250Url = app.globalData.doubanBase + '/v2/movie/top250?start=0&count=3';
+		
+		this.getMovieListData(inTheatersUrl, 'inTheaters');
+		this.getMovieListData(comingSoonUrl, 'comingSoon');
+		this.getMovieListData(top250Url, 'top250');
+	},
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+	getMovieListData(url, settedKey){
+		var that = this;
+		wx.request({
+			url: url,
+			method: 'get',
+			header: {
+				'Content-Type': 'application/xml'
+			},
+			success: function (res) {
+				// console.log(res);
+				that.processDoubanData(res.data, settedKey);
+				// if (res.statusCode == 200) {
+				// 	this.setData({
+				// 		top250: res.data.subjects
+				// 	});
+				// }
+			}
+		})
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+	// 获取并整理数据
+	processDoubanData(moviesDouban, settedKey) {
+		var movies = [];
+		var subject = moviesDouban.subjects;
+		subject.forEach(item => {
+			var temp = {};
+			temp.movieId = item.id; // id
+			temp.title = (item.title.length>6)?(item.title.substr(0,5)+'...'):item.title; // 电影名称
+			temp.image = item.images.large; // 图片
+			temp.average = item.rating.average; // 评分
+            temp.starsArr = util.convertToStarsArray(item.rating.average); //星星评分数组
+			movies.push(temp);
+		});
+		
+		var readyData = {};
+		readyData[settedKey] = {
+			title: moviesDouban.title,// 即将上映的电影
+			movies: movies
+		};
+		// console.log(readyData)
+		this.setData(readyData);
+	},
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
-})
+    onMoreTap(ev){
+        var category = ev.currentTarget.dataset.category;
+        wx.navigateTo({
+            url: 'more-movie/more-movie?category=' + category
+        })
+    }
+});
