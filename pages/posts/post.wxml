@@ -2,12 +2,12 @@
 <import src="post-item/post-item-tpl.wxml" />
 <view>
     <swiper indicator-dots="true" autoplay="true" interval="5000">
-        <swiper-item>
+        <!--<swiper-item>
             <image src="/images/swiper01.jpg"></image>
         </swiper-item>
         <swiper-item>
             <image src="/images/swiper02.jpg"></image>
-        </swiper-item>
+        </swiper-item>-->
         <swiper-item>
             <image src="/images/swiper03.jpg"></image>
         </swiper-item>

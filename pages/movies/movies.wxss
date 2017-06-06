@@ -1,5 +1,6 @@
 /* movies.wxss */
 @import 'movie-grid/movie-grid-tpl.wxss';
+@import 'movie-list/movie-list-tpl.wxss';
 
 .container {
     display: flex;
@@ -9,8 +10,7 @@
 	display: flex;
 	flex-direction: row;
 	background: #f2f2f2;
-	padding: 20rpx 30rpx;
-	font-size: 28rpx;
+    height: 80rpx;
 }
 .search image {
 	width: 40rpx;
@@ -18,8 +18,20 @@
 	margin-right: 50rpx;
 	margin-top: 5rpx;
 }
+.search icon {
+    margin: auto 40rpx;
+}
 .search input {
 	width: 600rpx;
-	font-size: 24rpx;
-	color: #a1a1a1;
+	font-size: 28rpx;
+    height: 100%;
+}
+.placeholder {
+    color: #d1d1d1;
+    /*font-size: 14rpx;*/
+    line-height: 80rpx;
+}
+.search-panel {
+    position: absolute;
+    top: 80rpx;
 }

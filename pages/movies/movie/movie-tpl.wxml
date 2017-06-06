@@ -1,6 +1,6 @@
 <import src="../stars/stars-tpl.wxml" />
 <template name="movieTpl">
-    <view class="movie-container">
+    <view class="movie-container" bindtap="onMovieTap" data-movieId="{{ movieId }}">
         <image class="movie-img" src="{{image}}"></image>
         <text class="movie-title">{{title}}</text>
         <template is="starsTpl" data="{{stars: starsArr ,score: average}}"/>

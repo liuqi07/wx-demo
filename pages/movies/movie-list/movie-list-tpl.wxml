@@ -1,11 +1,10 @@
 <import src="../movie/movie-tpl.wxml" />
-
 <template name="movieListTpl">
-    <view class="movie-list-container">
+    <scroll-view class="movie-list-container" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
         <block wx:for="{{ movies }}" wx:for-item="movie">
             <view class="single-view-container">
                 <template is="movieTpl" data="{{...movie}}"></template>
             </view>
         </block>
-    </view>
+    </scroll-view>
 </template>

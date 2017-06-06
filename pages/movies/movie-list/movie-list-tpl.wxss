@@ -6,4 +6,5 @@
 }
 .movie-list-container {
     margin: 40rpx 0 40rpx 30rpx;
+    height: 1300rpx;
 }

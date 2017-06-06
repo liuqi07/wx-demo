@@ -21,7 +21,29 @@ function http(url, callback) {
     });
 }
 
+function convertToCastString(casts){
+    var castsJoin = '';
+    for(var idx in casts){
+        castsJoin += casts[idx].name + ' / ';
+    }
+    return castsJoin.substring(0, castsJoin.length-3);
+}
+
+function convertToCastArray(casts){
+    var castsArray = [];
+    for(var idx in casts){
+        var tempObj = {
+            name: casts[idx].name,
+            imgUrl: casts[idx].avatars.large
+        }
+        castsArray.push(tempObj);
+    }
+    return castsArray;
+}
+
 module.exports = {
     convertToStarsArray: convertToStarsArray,
-    http: http
+    http: http,
+    convertToCastString: convertToCastString,
+    convertToCastArray: convertToCastArray 
 }

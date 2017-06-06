@@ -6,7 +6,10 @@ Page({
 	data: {
 		inTheaters: {},
 		comingSoon: {},
-		top250: {}
+		top250: {},
+        searchResult: {},
+        containerShow: true,
+        searchPanelShow: false
 	},
 
 	onLoad(ev) {
@@ -60,12 +63,46 @@ Page({
 		};
 		// console.log(readyData)
 		this.setData(readyData);
+        wx.hideNavigationBarLoading();
 	},
 
+    // 更多
     onMoreTap(ev){
         var category = ev.currentTarget.dataset.category;
         wx.navigateTo({
             url: 'more-movie/more-movie?category=' + category
         })
+    },
+
+    // 跳转详情
+    onMovieTap(ev){
+        var movieId = ev.currentTarget.dataset.movieid;
+        wx.navigateTo({
+            url: 'movie-detail/movie-detail?movieId='+movieId
+        })
+    },
+    
+    // 搜索框获取焦点
+    onBindFocus(){
+        this.setData({
+            containerShow: false,
+            searchPanelShow: true
+        });
+    },
+    // 关闭搜索框
+    onCloseTap(){
+        this.setData({
+            containerShow: true,
+            searchPanelShow: false,
+            searchResult: {}
+        });
+    },
+
+    onBindConfirm(ev){
+        console.log(ev);
+        var text = ev.detail.value;
+        var searchUrl = app.globalData.doubanBase + '/v2/movie/search?q='+ text;
+        this.getMovieListData(searchUrl, 'searchResult');
+        wx.showNavigationBarLoading();
     }
 });
