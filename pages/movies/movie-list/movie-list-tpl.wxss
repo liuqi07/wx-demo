@@ -5,5 +5,5 @@
     margin: 0 15rpx 40rpx 15rpx;
 }
 .movie-list-container {
-    margin: 40rpx 0 40rpx 15rpx;
+    margin: 40rpx 0 40rpx 30rpx;
 }
